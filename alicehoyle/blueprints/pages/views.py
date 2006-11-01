@@ -6,45 +6,46 @@ pages = Blueprint(
     template_folder='templates')
     
 
-@app.route('/')
+@pages.route('/')
 def index():
     return render_template('index.html')
 
 
-@app.route('/about')
+@pages.route('/about')
 def about():
     return render_template("about.html") 
 
 
-@app.route('/contact')
+@pages.route('/contact')
 def contact():
     return render_template("contact.html") 
 
 
-@app.route('/experience')
+@pages.route('/experience')
 def experience():
     return render_template("experience.html")
 
 
-@app.route('/groups')
+@pages.route('/groups')
 def groups():
     return render_template("groups.html") 
 
 
-@app.route('/howicanhelp')
+@pages.route('/howicanhelp')
 def howicanhelp():
     return render_template("howcanihelp.html") 
 
 
-@app.route('/resources')
+@pages.route('/resources')
 def resources():
     return render_template("resources.html") 
 
 
-@app.route('/testimonials')
+@pages.route('/testimonials')
 def testimonials():
     return render_template("testimonials.html") 
-    
-@app.route('/pretendfriends')
+
+
+@pages.route('/pretendfriends')
 def pretendfriends():
     return render_template("pretendfriends.html") 

@@ -1,0 +1,21 @@
+version: '2'  
+
+services:  
+  web:
+    build: ./alicehoyle
+    container_name: flaskapp
+    command: gunicorn -c "python:config.gunicorn" "alicehoyle.app:create_app()"
+    expose:
+      - "8000"
+    
+  nginx:
+    restart: always
+    build: ./nginx
+    container_name: nginx
+    ports:
+      - "80:80"
+    volumes_from:
+      - web
+    links:
+    - web:web
+  
