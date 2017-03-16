@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% set navigation_bar = [
+    (url_for('oar.CaseView:index'), 'oareview', 'Office Action Review', [
+        (url_for('oar.CaseView:index'), 'cases', 'View Cases'),
+        (url_for('oar.CaseView:index'), 'initialreview', 'Initial Review'),
+        (url_for('oar.CaseView:index'), 'detailedreview', 'Detailed Review')
+        ]
+    ),
+    (url_for('chkls.index'), 'checklists', 'Checklists', [
+    	(url_for('chkls.viewtemplates'), 'createedit', 'Create and View Templates'),
+    	(url_for('chkls.selecttemplates'), 'newfromtemplate', 'New Checklist from Template')   
+    ]),
+    (url_for('sch.index'), 'scheduling', 'Scheduling', [
+    	(url_for('sch.settings'), 'settings', 'Settings'),
+    	(url_for('sch.importtasks'), 'import', 'Import Tasks'),
+    	(url_for('sch.viewtasks'), 'view', 'View Tasks'),
+    	(url_for('sch.viewdays'), 'days', 'View Schedule')
+    	]
+    )
+] -%}
+{% set active_page = active_page|default('initialreview') -%}
+
+{% block navbar %}
+<nav class="navbar navbar-default navbar-static-top">
+	<div class="container">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="/">AttAss</a>
+		</div>
+		<ul class="nav navbar-nav">
+			{% for href, id, caption, dropdown in navigation_bar %}
+				{% if dropdown %}
+					<li class="dropdown {% if id == active_page %}active{% endif %}">
+						<a href="{{ href|e }}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ caption|e }} <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							{% for href, id, caption in dropdown %}
+								<li><a href="{{ href|e }}">{{ caption|e }}</a></li>
+							{% endfor %}
+						</ul>
+					</li>
+				{% else %}
+				<li{% if id == active_page %} class="active"{% endif %}><a href="{{ href|e }}">{{ caption|e }}</a></li>
+				{% endif %}
+			{% endfor %}
+		</ul>
+		<ul class="nav navbar-nav navbar-right">
+			<li><a href="#">{{ g.user.firstname }} {{g.user.surname }}</a></li>
+			<li><a href="{{ url_for('auth.logout') }}">Logout</a></li>
+		</ul>
+	</div>
+</nav>
+{% endblock %}

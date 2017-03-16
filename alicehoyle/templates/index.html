@@ -1,0 +1,120 @@
+{% extends "navbar.html" %}
+
+{% block title %}Health Educator &amp; Trainer{% endblock %}
+
+{% block head %}
+{{ super() }}
+<!-- Custom styles for this template -->
+<link href="{{ url_for('static', filename='css/carousel.css') }}" rel="stylesheet">
+<style>
+.educate {
+    background: url("{{ url_for('static', filename='images/educateback.jpg') }}") no-repeat center;
+}
+
+.train {
+    background: url("{{ url_for('static', filename='images/trainback.jpg') }}") no-repeat center;
+}
+
+.communicate {
+    background: url("{{ url_for('static', filename='images/communicateback.jpg') }}") no-repeat center;
+}
+</style>
+{% endblock %}
+
+{% block outside_container %}
+<!-- Carousel ================================================== -->
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+        <div class="item active educate">
+            <div class="carousel-caption">
+              <h1>Educating</h1>
+              <br />
+              <p>Direct delivery of engaging and innovative lessons to young people.</p>
+              <p><small><i>"Educating the mind without educating the heart is no education at all."</i></small><br /><small>Aristotle</small></p>
+              <!--<p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>-->
+            </div>
+        </div>
+        <div class="item train">
+            <div class="carousel-caption">
+              <h1>Training</h1>
+              <br />
+              <p>Training in all aspects of mental health and sexual health and working with young people.</p>
+              <p><small><i>"The mediocre teacher tells. The good teacher explains. The superior teacher demonstrates. The great teacher inspires."</i></small><br /><small>William Arthur Ward</small></p>
+              <!--<p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>-->
+            </div>
+        </div>
+        <div class="item communicate">
+            <div class="carousel-caption">
+              <h1>Communicating</h1>
+              <br />
+              <p>Writing educational materials for a wide variety of audiences and public speaking.</p>
+              <br />
+              <p><small><i>"That which we are capable of feeling, we are capable of saying."</i></small><br /><small>Cervantes</small></p>
+              <!--<p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>-->
+            </div>
+        </div>
+    </div>
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div><!-- /.carousel -->
+{% endblock %}
+
+{% block content %}
+<div class="container marketing">
+    <div class="row">
+        <div class="col-lg-4">
+            <img class="img-circle" src="{{ url_for('static', filename='images/AliceConWhBack.jpeg') }}" alt="Generic placeholder image" width="140" height="140">
+              <h2>How I Can Help</h2>
+              <p>Find out more about how I can help you, your school or your organisation provide health education.</p>
+              <p><a class="btn btn-default" href="{{ url_for('return_page', page='howicanhelp.html') }}" role="button">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+            <img class="img-circle" src="{{ url_for('static', filename='images/ConTV.jpeg') }}" alt="Generic placeholder image" width="140" height="140">
+            <h2>Resources</h2>
+            <p>A selection of free resources for teachers and parents. Includes Personal, Social and Health Education (PSHE) resources, Sex and Relationships Education (SRE) resources and general teaching resources.</p>
+            <p><a class="btn btn-default" href="{{ url_for('return_page', page='resources.html') }}" role="button">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+            <img class="img-circle" src="{{ url_for('static', filename='images/BlogHeaderSq.png') }}" alt="Blog Image" width="140" height="140">
+            <h2>Social Media</h2>
+            <p>Catch up with my posts and profiles on social media.</p>
+            <p><a class="btn btn-default" href="{{ url_for('return_page', page='socialmedia.html') }}" role="button">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+    </div><!-- /.row -->
+    <hr>
+
+    <div class="row">
+        <div class="col-lg-4">
+            <img class="img-circle" src="{{ url_for('static', filename='images/AliceHeadSq.jpeg') }}" alt="Alice Hoyle" width="140" height="140">
+            <h2>About</h2>
+            <p>Read about my profile and experience.</p>
+            <p><a class="btn btn-default" href="{{ url_for('return_page', page='about.html') }}" role="button">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+            <img class="img-circle" src="{{ url_for('static', filename='images/hands.jpg') }}" alt="Generic placeholder image" width="140" height="140">
+            <h2>Testimonials</h2>
+            <p>See what others say about my work.</p>
+            <p><a class="btn btn-default" href="{{ url_for('return_page', page='testimonials.html') }}" role="button">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+            <img class="img-circle" src="{{ url_for('static', filename='images/dolls.jpeg') }}" alt="Blog Image" width="140" height="140">
+            <h2>Contact</h2>
+            <p>Get in touch!</p>
+            <p><a class="btn btn-default" href="{{ url_for('return_page', page='contact.html') }}" role="button">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+    </div><!-- /.row -->
+</div>
+<hr class="featurette-divider">
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block navbar %}
+<!-- NAVBAR ============================================ -->
+<div class="navbar-wrapper">
+    <div class="container">
+        <nav class="navbar navbar-inverse navbar-static-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Alice Hoyle</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="{{ url_for('return_page', page='') }}">Home</a></li>
+                        <li><a href="{{ url_for('return_page', page='about.html') }}">About</a></li>
+                        <li><a href="{{ url_for('return_page', page='contact.html') }}">Contact</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Jump to...<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="{{ url_for('return_page', page='howicanhelp.html') }}">How I Can Help</a></li>
+                                <li><a href="{{ url_for('return_page', page='pretendfriends.html') }}">Pretend Friends</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="{{ url_for('return_page', page='experience.html') }}">Experience</a></li>
+                                <li><a href="{{ url_for('return_page', page='groups.html') }}">Groups</a></li>
+                                <li><a href="{{ url_for('return_page', page='resources.html') }}">Resources</a></li>
+                                <li><a href="{{ url_for('return_page', page='socialmedia.html') }}">Social Media</a></li>
+                                <li><a href="{{ url_for('return_page', page='testimonials.html') }}">Testimonials</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>
+{% endblock %}
