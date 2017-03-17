@@ -1,6 +1,6 @@
 from flask import Flask
 
-from alicewebsite.blueprints.pages import pages
+from alicehoyle.blueprints.pages import pages
 
 def create_app(settings_override=None):
     """

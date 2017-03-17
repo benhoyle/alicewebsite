@@ -1,0 +1,57 @@
+{% extends 'navbar.html' %}
+
+{% block title %}Pretend Friends{% endblock %}
+
+{% block content %}
+<div class="pagecontent">
+    <h2 class="featurette-heading">Pretend Friends.<span class="text-muted"> A Storybook.</span></h2>
+    <hr />
+    <img class="img-responsive center-block" src="{{ url_for('static', filename='images/pf_banner_big.png') }}" alt="Pretend Friends Banner">
+    <div class="row">
+        <div class="col-lg-12 col-xs-12">
+            <p>
+                In 2015 my first children's book <a href="http://www.jkp.com/uk/pretend-friends.html">Pretend Friends</a> 
+                was published by <a href="http://www.jkp.com/">JKP</a> which explains mental illnesses 
+                that include hearing voices for children. As an active supporter of <a href="https://www.rethink.org/">Rethink Mental Illness</a>
+                 I have donated all my royalties from the sales of this book to the charity.  I wrote the story as I wanted to support my 
+                children to understand how mental illness can affect some people close to us without overwhelming or scaring them. 
+                I searched for books to help me start these conversations, but there is a real lack of such books so I decided to write my own.
+            </p>
+            <p>
+                The main idea is a gentle, non-scary, age appropriate explanation about what it might be like to live with hearing voices or experiencing 
+                things that other people don't experience using the idea of 'Pretend Friends'.  My children have vivid imaginations and plenty of pretend 
+                friends and it struck me how we don't worry when children have pretend friends but we do worry when adults don't have the same experiences 
+                of reality. It's an analogy children can relate to, and simplifies some of the complexities of experiencing psychosis or living with schizophrenia 
+                to a level children can understand. 
+            </p>
+            <p>
+                The story explores the adventures of Little Bea and her imaginary friend Nye-Nye and compares them 
+                with the experiences of Big Jay and his pretend friends (the voices he hears). The story asks for people 
+                to bekind to people like Big Jay and to "love them just as they are".
+            </p>
+            <p>
+                The story ensures that the main character Little Bea was absolved of any big responsibility to make Big Jay 
+                better, but that ways of supporting Big Jay in his recovery were explained.  I didn't want a child to feel 
+                worried or upset or that they needed to take on caring responsibilities if they found out someone close to 
+                their family was hearing voices. That should be a grown up job! 
+            </p>
+            <p>
+                I truly believe it is vitally important to start talking about mental healthfrom a young age, so children can 
+                learn to look after their own mental health, and to support their peers if they are experiencing issues of their 
+                own. Stories such as Pretend Friends can also help children to grow up to be kind and accept people for who they are 
+                and not to worry or be scared of people who are different from them. I hope that by supporting children to understand 
+                mental illness, this will help our society to become more inclusive, supportive and kind.  
+            </p>
+            <br/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-5 col-sm-5">
+            <img class="img-responsive center-block" src="{{ url_for('static', filename='images/booklaunch.jpg') }}" alt="At the book launch" style="margin-bottom:20px">
+        </div>
+        <div class="col-md-7 col-sm-7">
+            <img class="img-responsive center-block" src="{{ url_for('static', filename='images/pf_banner.png') }}" alt="Pretend Friends Rainbow" style="margin-bottom:20px">
+        </div>
+    </div>
+</div>
+{% endblock %}

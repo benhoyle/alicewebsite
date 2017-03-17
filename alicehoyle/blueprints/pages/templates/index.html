@@ -74,47 +74,64 @@
 {% block content %}
 <div class="container marketing">
     <div class="row">
-        <div class="col-lg-4">
+        <div class="col-lg-4 col-sm-6 col-xs-12">
             <img class="img-circle" src="{{ url_for('static', filename='images/AliceConWhBack.jpeg') }}" alt="Generic placeholder image" width="140" height="140">
               <h2>How I Can Help</h2>
-              <p>Find out more about how I can help you, your school or your organisation provide health education.</p>
+              <p>Find out more below.</p>
               <p><a class="btn btn-default" href="{{ url_for('howicanhelp') }}" role="button">View details &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
+        <div class="col-lg-4 col-sm-6 col-xs-12">
             <img class="img-circle" src="{{ url_for('static', filename='images/ConTV.jpeg') }}" alt="Generic placeholder image" width="140" height="140">
             <h2>Resources</h2>
-            <p>A selection of free resources for teachers and parents. Includes Personal, Social and Health Education (PSHE) resources, Sex and Relationships Education (SRE) resources and general teaching resources.</p>
+            <p>Free resources for teachers and parents.</p>
             <p><a class="btn btn-default" href="{{ url_for('resources') }}" role="button">View details &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
+        <div class="clearfix visible-sm visible-md"></div>
+        <div class="col-lg-4 col-sm-6 col-xs-12">
             <img class="img-circle" src="{{ url_for('static', filename='images/BlogHeaderSq.png') }}" alt="Blog Image" width="140" height="140">
             <h2>Social Media</h2>
-            <p>Catch up with my posts and profiles on social media.</p>
+            <p>My posts and profiles on social media.</p>
             <p><a class="btn btn-default" href="{{ url_for('socialmedia') }}" role="button">View details &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
-    </div><!-- /.row -->
-    <hr>
-
-    <div class="row">
-        <div class="col-lg-4">
-            <img class="img-circle" src="{{ url_for('static', filename='images/AliceHeadSq.jpeg') }}" alt="Alice Hoyle" width="140" height="140">
+        <div class="clearfix visible-lg"></div>
+        <div class="col-lg-4 col-sm-6 col-xs-12">
+            <img class="img-circle" src="{{ url_for('static', filename='images/twitter.jpg') }}" alt="Alice Hoyle" width="140" height="140">
             <h2>About</h2>
             <p>Read about my profile and experience.</p>
             <p><a class="btn btn-default" href="{{ url_for('about') }}" role="button">View details &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
+        <div class="clearfix visible-sm visible-md"></div>
+        <div class="col-lg-4 col-sm-6 col-xs-12">
             <img class="img-circle" src="{{ url_for('static', filename='images/hands.jpg') }}" alt="Generic placeholder image" width="140" height="140">
             <h2>Testimonials</h2>
             <p>See what others say about my work.</p>
             <p><a class="btn btn-default" href="{{ url_for('testimonials') }}" role="button">View details &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
+        <div class="col-lg-4 col-sm-6 col-xs-12">
             <img class="img-circle" src="{{ url_for('static', filename='images/dolls.jpeg') }}" alt="Blog Image" width="140" height="140">
             <h2>Contact</h2>
             <p>Get in touch!</p>
             <p><a class="btn btn-default" href="{{ url_for('contact') }}" role="button">View details &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
     </div><!-- /.row -->
+    <hr class="featurette-divider">
+    <div class="row">
+        <div class="col-lg-7 col-md-8 col-sm-7">
+            <img class="img-responsive center-block" src="{{ url_for('static', filename='images/pf_banner_big.png') }}" alt="Pretend Friends Banner">
+            <br/>
+        </div>
+        <div class="col-lg-5 col-md-4 col-sm-5">
+            <p>
+                In 2015 my first children's book <a href="http://www.jkp.com/uk/pretend-friends.html">Pretend Friends</a> 
+                was published by <a href="http://www.jkp.com/">JKP</a> which explains mental illnesses 
+                that include hearing voices for children. As an active supporter of <a href="https://www.rethink.org/">Rethink Mental Illness</a>
+                 I have donated all my royalties from the sales of this book to the charity.  I wrote the story as I wanted to support my 
+                children to understand how mental illness can affect some people close to us without overwhelming or scaring them. 
+            </p>
+            <p class="text-center"><a class="btn btn-default" href="{{ url_for('pretendfriends') }}" role="button">Find out more &raquo;</a></p>
+        </div>
+        
+    </div>
 </div>
-<hr class="featurette-divider">
+
 {% endblock %}

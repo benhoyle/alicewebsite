@@ -1,0 +1,26 @@
+{% extends 'navbar.html' %}
+
+{% block title %}Contact{% endblock %}
+
+{% block content %}
+<div class="pagecontent">
+    <div class="row">
+        <div class="col-md-8 col-sm-6">
+            <p class="lead">
+                If you need help with PSHE, SRE, mental health projects or anything else, please email me at
+                <SCRIPT type='text/javascript'>
+                    a='alice.t.hoyle'; b='gmail.com'; 
+                    document.write('<a hre'+'f="mai'+'lto:'+a+'@'+b+'?Subject=Enquiry%20from%20Website">');
+                    document.write(a+'@'+b+'</a>');
+                </SCRIPT>.
+            </p>
+         
+         
+            <p class="lead">You can also get in touch via Twitter. Find me at <a href="https://twitter.com/alicehoylepshe">@AliceHoylePSHE</a>.</p> 
+        </div>
+        <div class="col-md-4 col-sm-6">
+            <img class="img-responsive center-block" src="{{ url_for('static', filename='images/alicetv2.png') }}" alt="Alice on TV">
+        </div>
+    </div>
+</div>
+{% endblock %}attass
