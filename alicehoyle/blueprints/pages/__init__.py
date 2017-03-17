@@ -1,0 +1,1 @@
+from alicewebsite.blueprints.pages.views import pages
