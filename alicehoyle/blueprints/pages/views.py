@@ -49,3 +49,8 @@ def testimonials():
 @pages.route('/pretendfriends')
 def pretendfriends():
     return render_template("pretendfriends.html") 
+    
+
+@pages.route('/socialmedia')
+def socialmedia():
+    return render_template("socialmedia.html") 

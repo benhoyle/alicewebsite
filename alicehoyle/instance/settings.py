@@ -1,4 +1,4 @@
-SERVER_NAME = 'alicehoyle.co.uk'
+#SERVER_NAME = 'alicehoyle.co.uk'
 
 DEBUG = False
 TESTING = False

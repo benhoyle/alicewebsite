@@ -1,1 +1,1 @@
-from alicehoyle.blueprints.pages.views import pages
+from blueprints.pages.views import pages

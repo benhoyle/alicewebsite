@@ -13,23 +13,23 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="{{ url_for('index') }}">Alice Hoyle</a>
+                    <a class="navbar-brand" href="{{ url_for('pages.index') }}">Alice Hoyle</a>
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li><a href="{{ url_for('about') }}">About</a></li>
-                        <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                        <li><a href="{{ url_for('pages.about') }}">About</a></li>
+                        <li><a href="{{ url_for('pages.contact') }}">Contact</a></li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Jump to...<span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="{{ url_for('howicanhelp') }}">How I Can Help</a></li>
-                                <li><a href="{{ url_for('pretendfriends') }}">Pretend Friends</a></li>
+                                <li><a href="{{ url_for('pages.howicanhelp') }}">How I Can Help</a></li>
+                                <li><a href="{{ url_for('pages.pretendfriends') }}">Pretend Friends</a></li>
                                 <li role="separator" class="divider"></li>
-                                <li><a href="{{ url_for('experience') }}">Experience</a></li>
-                                <li><a href="{{ url_for('groups') }}">Groups</a></li>
-                                <li><a href="{{ url_for('resources') }}">Resources</a></li>
-                                <li><a href="{{ url_for('socialmedia') }}">Social Media</a></li>
-                                <li><a href="{{ url_for('testimonials') }}">Testimonials</a></li>
+                                <li><a href="{{ url_for('pages.experience') }}">Experience</a></li>
+                                <li><a href="{{ url_for('pages.groups') }}">Groups</a></li>
+                                <li><a href="{{ url_for('pages.resources') }}">Resources</a></li>
+                                <li><a href="{{ url_for('pages.socialmedia') }}">Social Media</a></li>
+                                <li><a href="{{ url_for('pages.testimonials') }}">Testimonials</a></li>
                             </ul>
                         </li>
                     </ul>
