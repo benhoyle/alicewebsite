@@ -11,4 +11,4 @@ RUN pip install -r requirements.txt
 
 COPY . .
 
-CMD gunicorn -c "python:alicehoyle.config.gunicorn" "alicehoyle.app:create_app()"
+CMD gunicorn -c "python:config.gunicorn" "app:create_app()"

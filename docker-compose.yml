@@ -5,7 +5,7 @@ services:
     build: ./alicehoyle
     container_name: flaskapp
     command: 
-        gunicorn -c "python:alicehoyle.config.gunicorn" "alicehoyle.app:create_app()"
+        gunicorn -c "python:config.gunicorn" "app:create_app()"
     expose:
       - "8000"
     
