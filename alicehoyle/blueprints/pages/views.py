@@ -4,7 +4,7 @@ pages = Blueprint(
     'pages',
     __name__,
     template_folder='templates')
-    
+
 
 @pages.route('/')
 def index():
@@ -13,12 +13,12 @@ def index():
 
 @pages.route('/about')
 def about():
-    return render_template("about.html") 
+    return render_template("about.html")
 
 
 @pages.route('/contact')
 def contact():
-    return render_template("contact.html") 
+    return render_template("contact.html")
 
 
 @pages.route('/experience')
@@ -28,29 +28,29 @@ def experience():
 
 @pages.route('/groups')
 def groups():
-    return render_template("groups.html") 
+    return render_template("groups.html")
 
 
 @pages.route('/howicanhelp')
 def howicanhelp():
-    return render_template("howcanihelp.html") 
+    return render_template("howicanhelp.html")
 
 
 @pages.route('/resources')
 def resources():
-    return render_template("resources.html") 
+    return render_template("resources.html")
 
 
 @pages.route('/testimonials')
 def testimonials():
-    return render_template("testimonials.html") 
+    return render_template("testimonials.html")
 
 
 @pages.route('/pretendfriends')
 def pretendfriends():
-    return render_template("pretendfriends.html") 
-    
+    return render_template("pretendfriends.html")
+
 
 @pages.route('/socialmedia')
 def socialmedia():
-    return render_template("socialmedia.html") 
+    return render_template("socialmedia.html")

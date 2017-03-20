@@ -1,26 +1,27 @@
-version: '2'  
+version: '2'
 
-services:  
+services:
   web:
     build: ./alicehoyle
     container_name: flaskapp
-    command: 
-        gunicorn -b :8000 --reload "app:create_app()"
+    command: >
+        gunicorn -b :8000
+         --access-logfile -
+         --reload
+         "app:create_app()"
     volumes:
     - /static
     expose:
       - "8000"
-    
+
   nginx:
     restart: always
     build: ./nginx
     container_name: nginx
     ports:
       - "80:80"
-    volumes:
-    - /www/static
     volumes_from:
       - web
     links:
     - web:web
-  
+
