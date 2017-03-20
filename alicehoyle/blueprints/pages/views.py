@@ -1,4 +1,7 @@
-from flask import Blueprint, render_template
+from flask import (
+    Blueprint, render_template, make_response, current_app,
+    request
+    )
 
 pages = Blueprint(
     'pages',
@@ -54,3 +57,22 @@ def pretendfriends():
 @pages.route('/socialmedia')
 def socialmedia():
     return render_template("socialmedia.html")
+
+
+@pages.route('/sitemap.xml', methods=['GET'])
+def sitemap():
+    pages = []
+    for rule in current_app.url_map.iter_rules():
+        if "GET" in rule.methods and len(rule.arguments) == 0:
+            pages.append(
+                        [rule.rule]
+                        )
+    url_root = request.url_root[:-1]
+    sitemap_xml = render_template(
+        'sitemap.xml',
+        pages=pages,
+        url_root=url_root
+        )
+    response = make_response(sitemap_xml)
+    response.headers["Content-Type"] = "application/xml"
+    return response
