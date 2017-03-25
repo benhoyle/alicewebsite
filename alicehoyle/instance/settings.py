@@ -1,6 +1,0 @@
-#SERVER_NAME = 'alicehoyle.co.uk'
-
-DEBUG = False
-TESTING = False
-
-ANALYTICS_GOOGLE_UA = 'UA-93967212-1'
